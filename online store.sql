@@ -29,9 +29,8 @@ ORDER BY price DESC;
 
 -- Display the name and an expression showing the price with 18% tax added (label it as price_with_tax).
 
-SELECT name, price * 1.18 AS price_with_tax
+SELECT name, price + (price * 18 / 100) AS price_with_tax
 FROM product;
-
 
 
 
